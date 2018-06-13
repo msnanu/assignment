@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function qr_code_theme($existing, $type, $theme, $path) {
+  return array(
+      'qr_code_block' => array(
+          'variables' => array(
+              'url' => array(),
+              'alt' => array(),
+              'width' => array(),
+              'height' => array(),
+           ),
+      ),
+  );
+}

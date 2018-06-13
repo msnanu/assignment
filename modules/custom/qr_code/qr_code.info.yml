@@ -1,0 +1,8 @@
+name: QR Code Block
+description: A QR code block displaying on the products page containing purchase link.
+package: QR Code
+type: module
+# core: 8.x
+# Information added by Drupal.org packaging script on 2016-01-22
+version: '8.x-1.0'
+core: '8.x'
