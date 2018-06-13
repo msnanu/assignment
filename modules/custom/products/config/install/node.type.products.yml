@@ -1,0 +1,9 @@
+langcode: en
+status: true
+name: products
+type: products
+description: 'displaying products on the site'
+help: ''
+new_revision: false
+preview_mode: 1
+display_submitted: true

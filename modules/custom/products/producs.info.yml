@@ -1,0 +1,6 @@
+name: Products
+type: module
+description: 'Showing product with description,image & QR code'
+core: 8.x
+dependencies:
+  - node
