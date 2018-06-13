@@ -1,0 +1,13 @@
+name: Page URL QR Code Block
+description: A tiny module that provides a Block with a QR Code for that Page.
+package: QR Code
+type: module
+dependencies:
+  - block
+
+# core: 8.x
+# Information added by Drupal.org packaging script on 2016-01-22
+version: '8.x-1.0'
+core: '8.x'
+project: 'page_url_qr_code_block'
+datestamp: 1453459486
