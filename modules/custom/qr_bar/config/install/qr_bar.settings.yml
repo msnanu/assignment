@@ -1,0 +1,3 @@
+qr_bar:
+    qr_bar_alt: 'QR code for this page URL'
+    qr_bar_width: '150'

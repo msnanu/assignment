@@ -1,0 +1,11 @@
+block.settings.qr_bar:
+  type: block_settings
+  label: 'QR Bar block configuration'
+  mapping:
+    qr_bar_alt:
+      type: text
+      label: 'Alt Text'
+    qr_bar_width:
+      type: text
+      label: 'QR Code Width & Height'
+      description: 'Width & Height will be same. i.e. 150'

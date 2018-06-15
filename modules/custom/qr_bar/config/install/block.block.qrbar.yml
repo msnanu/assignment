@@ -1,0 +1,14 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - qr_bar
+  theme:
+    - bartik
+id: qrbar
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: qr_bar
+visibility: {  }

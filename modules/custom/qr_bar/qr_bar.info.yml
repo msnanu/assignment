@@ -1,0 +1,12 @@
+name: QR Bar
+description: A QR Bar block displaying on the products page containing purchase link.
+package: QR Bar
+type: module
+dependencies:
+  - node
+  - block
+# core: 8.x
+# Information added by Drupal.org packaging script on 2016-01-22
+version: '8.x-1.0'
+core: '8.x'
+project: 'qr_bar'
