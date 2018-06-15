@@ -1,0 +1,10 @@
+id_social_media_feeds.social_feed_config:
+  title: 'ID Social Feeds Configuriation'
+  description: 'ID Social Feeds Configuriation'
+  parent: mid_common.admin_content
+  route_name: IdSocialMediaFeedConfig
+id_social_media_feeds.social_feed_api_config:
+  title: 'SMFeeds API Configuriation'
+  description: 'SMFeeds API Configuriation'
+  parent: id_social_media_feeds.social_feed_config
+  route_name: IdSocialMediaAPIConfig

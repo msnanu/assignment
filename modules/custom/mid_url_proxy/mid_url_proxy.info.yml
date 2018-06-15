@@ -1,0 +1,13 @@
+name: Mid URL Proxy Module
+type: module
+description: 'Module to get the data from the remote site server.'
+package: MID
+core: 8.x
+dependencies:
+  - toolbar
+  - options
+  - mid_common
+# version: VERSION
+# core: 8.x
+# Information added by Drupal.org packaging script on 2016-03-02
+datestamp: 1466521930

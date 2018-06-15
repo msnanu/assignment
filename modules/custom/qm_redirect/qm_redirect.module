@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * Implements hook_array()
+ */
+function qm_redirect_array() {
+  return array(
+    'admin/config/search/qm_redirect' => array(
+      'title' => 'Qm redirect ',
+      'route_name' => 'qm_redirect_list',
+    ),
+    'admin/config/search/qm_redirect/add' => array(
+      'title' => 'Qm redirect',
+      'route_name' => 'qm_redirect_add',
+    ),
+    'admin/config/search/qm_redirect/delete/%' => array(
+      'title' => 'Delete qm_redirect ',
+      'route_name' => 'qm_redirect_delete',
+    )
+  );
+}

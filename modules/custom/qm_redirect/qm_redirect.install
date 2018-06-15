@@ -1,0 +1,63 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function qm_redirect_schema() {
+  $schema['qm_redirect'] = array(
+    'fields' => array(
+      'rid' => array(
+        'type' => 'serial',
+        'not null' => TRUE,
+      ),
+      'type' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => false,
+      ),
+      'hash' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => false,
+      ),
+      'source' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => false,
+      ),
+      'source_options' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => false,
+      ),
+      'questionmarkredirect' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => false,
+      ),
+      'questionmarkredirect_options' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => false,
+      ),
+      'language' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => false,
+      ),
+      'chkdiable' => array(
+        'type' => 'int',
+        'length' => 11,
+        'not null' => false,
+      ),
+      'diable_url' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => false,
+      ),
+    ),
+    'primary key' => array('rid'),
+  );
+
+  return $schema;
+}

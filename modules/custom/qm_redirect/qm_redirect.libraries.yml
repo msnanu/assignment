@@ -1,0 +1,7 @@
+qm_redirect:
+  version: 1.x
+  css:
+   layout:
+     css/qm_redirect.css: {}
+  js:
+    js/qm_redirect.js: {}

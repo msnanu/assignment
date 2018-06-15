@@ -1,0 +1,46 @@
+qm_redirect_list:
+  path: '/admin/config/search/qm_redirect/list'
+  defaults:
+    _controller: '\Drupal\qm_redirect\Controller\AdminController::content'
+  requirements:
+    _permission: 'access content'
+
+qm_redirect_add:
+  path: '/admin/config/search/qm_redirect/add'
+  defaults:
+    _form: '\Drupal\qm_redirect\AddForm'
+    _title: 'Questionmark URL redirects'
+  requirements:
+    _permission: 'access content'
+
+qm_redirect_edit:
+  path: 'admin/config/search/qm_redirect/edit/{id}'
+  defaults:
+    _form: 'Drupal\qm_redirect\AddForm'
+    _title: 'Edit Questionmark redirects'
+  requirements:
+    _permission: 'access content'
+
+qm_redirect_delete:
+  path: '/admin/config/search/qm_redirect/delete/{id}'
+  defaults:
+    _form: 'Drupal\qm_redirect\DeleteForm'
+    _title: 'Questionmark URL redirects'
+  requirements:
+    _permission: 'access content'
+
+qm_redirect_import:
+  path: '/admin/config/search/qm_redirect/import'
+  defaults:
+    _form: '\Drupal\qm_redirect\ImportForm'
+    _title: 'Questionmark URL redirects'
+  requirements:
+    _permission: 'access content'   
+    
+qm_redirect_listing:
+  path: '/admin/config/search/qm_redirect'
+  defaults:
+    _form: '\Drupal\qm_redirect\ListForm'
+    _title: 'Questionmark URL redirects'
+  requirements:
+    _permission: 'access content'        

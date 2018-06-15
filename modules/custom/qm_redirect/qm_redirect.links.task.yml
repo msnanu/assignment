@@ -1,0 +1,4 @@
+qm_redirect_listing:
+  title: Questionmark URL Redirects
+  route_name: qm_redirect_listing
+  base_route: system.admin_config_search

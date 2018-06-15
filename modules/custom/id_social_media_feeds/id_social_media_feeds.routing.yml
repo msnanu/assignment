@@ -1,0 +1,89 @@
+IdSocialMediaFeedConfig:
+  path: '/admin/config/id-social-feeds-config'
+  defaults:
+    _form: '\Drupal\id_social_media_feeds\Form\SocialMediaFeedsList'
+    _title: 'List'
+  requirements:
+    _permission: 'access administration pages'
+
+IdSocialMediaAPIConfig:
+  path: '/admin/config/id-social-feeds-api-config'
+  defaults:
+    _form: '\Drupal\id_social_media_feeds\Form\SocialMediaFeedsAPIConfigForm'
+    _title: 'SMFeeds API Configuration'
+  requirements:
+    _permission: 'access administration pages'
+
+
+IdSocialMediaAddTwitterConfig:
+  path: '/admin/config/id-social-feeds-config/twitter/add'
+  defaults:
+    _form: '\Drupal\id_social_media_feeds\Form\SocialMediaFeedsTwitterConfigForm'
+    _title: 'Add Twitter'
+  requirements:
+    _permission: 'access administration pages'
+IdSocialMediaEditTwitterConfig:
+  path: '/admin/config/id-social-feeds-config/twitter/edit/{id}'
+  defaults:
+    _form: '\Drupal\id_social_media_feeds\Form\SocialMediaFeedsTwitterConfigForm'
+    _title: 'Edit Twitter'
+  requirements:
+    _permission: 'access administration pages'
+IdSocialMediaDeleteTwitterConfig:
+  path: '/admin/config/id-social-feeds-config/twitter/delete/{id}'
+  defaults:
+    _form: '\Drupal\id_social_media_feeds\Form\SocialMediaFeedsTwitterConfigForm'
+    _title: 'Delete Twitter'
+  requirements:
+    _permission: 'access administration pages'
+
+
+
+IdSocialMediaAddFacebookConfig:
+  path: '/admin/config/id-social-feeds-config/facebook/add'
+  defaults:
+    _form: '\Drupal\id_social_media_feeds\Form\SocialMediaFeedsFacebookConfigForm'
+    _title: 'Add Facebook'
+  requirements:
+    _permission: 'access administration pages'
+IdSocialMediaEditFacebookConfig:
+  path: '/admin/config/id-social-feeds-config/facebook/edit/{id}'
+  defaults:
+    _form: '\Drupal\id_social_media_feeds\Form\SocialMediaFeedsFacebookConfigForm'
+    _title: 'Edit Facebook'
+  requirements:
+    _permission: 'access administration pages'
+IdSocialMediaDeleteFacebookConfig:
+  path: '/admin/config/id-social-feeds-config/facebook/delete/{id}'
+  defaults:
+    _form: '\Drupal\id_social_media_feeds\Form\SocialMediaFeedsFacebookConfigForm'
+    _title: 'Delete Facebook'
+  requirements:
+    _permission: 'access administration pages'
+
+
+
+
+IdSocialMediaAddLinkedinConfig:
+  path: '/admin/config/id-social-feeds-config/linkedin/add'
+  defaults:
+    _form: '\Drupal\id_social_media_feeds\Form\SocialMediaFeedsLinkedinConfigForm'
+    _title: 'Add Linkedin'
+  requirements:
+    _permission: 'access administration pages'
+IdSocialMediaEditLinkedinConfig:
+  path: '/admin/config/id-social-feeds-config/linkedin/edit/{id}'
+  defaults:
+    _form: '\Drupal\id_social_media_feeds\Form\SocialMediaFeedsLinkedinConfigForm'
+    _title: 'Edit Linkedin'
+  requirements:
+    _permission: 'access administration pages'
+IdSocialMediaDeleteLinkedinConfig:
+  path: '/admin/config/id-social-feeds-config/linkedin/delete/{id}'
+  defaults:
+    _form: '\Drupal\id_social_media_feeds\Form\SocialMediaFeedsLinkedinConfigForm'
+    _title: 'Delete Linkedin'
+  requirements:
+    _permission: 'access administration pages'
+
+

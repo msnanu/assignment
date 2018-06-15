@@ -1,0 +1,5 @@
+services:
+  qm_redirect_event_subscriber:
+    class: Drupal\qm_redirect\EventSubscriber\QmRedirectSubscriber
+    tags:
+      - {name: event_subscriber}

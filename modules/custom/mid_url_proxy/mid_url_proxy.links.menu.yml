@@ -1,0 +1,13 @@
+# Define the menu links for this module
+
+entity.mid_url_proxy.collection:
+  title: 'ID URL PROXY'
+  route_name: entity.mid_url_proxy.collection
+  description: 'List ID Url Proxy'
+  parent: mid_common.admin_content
+  weight: 10
+mid_url_proxy.admin.structure.settings:
+  title: ID Url Proxy Settings
+  description: 'Configure ID Url Proxy entity'
+  route_name:  mid_url_proxy.url_proxy_settings
+  parent: entity.mid_url_proxy.collection

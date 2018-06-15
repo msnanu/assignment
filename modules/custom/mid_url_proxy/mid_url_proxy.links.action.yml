@@ -1,0 +1,11 @@
+# All action links for this module
+
+mid_url_proxy.url_proxy_add:
+  # Which route will be called by the link
+  route_name: mid_url_proxy.add
+  title: 'Add URL Proxy'
+
+  # Where will the link appear, defined by route name.
+  appears_on:
+    - entity.mid_url_proxy.collection
+    - entity.mid_url_proxy.canonical

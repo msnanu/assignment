@@ -1,0 +1,19 @@
+id_social_media_feeds.socialFeedConfig:
+  route_name: IdSocialMediaFeedConfig
+  base_route: IdSocialMediaFeedConfig
+  title: 'List'
+id_social_media_feeds.addTwitter:
+  route_name: IdSocialMediaAddTwitterConfig
+  base_route: IdSocialMediaFeedConfig
+  title: 'Add Twitter'
+  weight: 2
+id_social_media_feeds.addFacebook:
+  route_name: IdSocialMediaAddFacebookConfig
+  base_route: IdSocialMediaFeedConfig
+  title: 'Add Facebook'
+  weight: 3
+id_social_media_feeds.addLinkedin:
+  route_name: IdSocialMediaAddLinkedinConfig
+  base_route: IdSocialMediaFeedConfig
+  title: 'Add Linkedin'
+  weight: 4

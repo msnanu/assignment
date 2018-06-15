@@ -1,0 +1,117 @@
+{#
+/**
+ * @file
+ * Custom template for the Twitter feeds display.
+ *
+ * Available variables:
+ * - doubles: It is an array of all the post provided by SWFeeds API.
+ * - postid: Post Id of the post.
+ * - title: Title of the post.
+ * - description: Description of the post.
+ * - thumbimageurl: Thumbnail image URL.
+ * - mediumimageurl: Mediul image URL.
+ * - largeimageurl: Large image URL.
+ * - posturl: Post URL.
+ * - rawposturl: Raw post URL.
+ * - embedurl: Embed URL.
+ * - posteddate: Post date.
+ * - likecount: Like count of post.
+ * - commentcount: Comment count of post.
+ * - noofviews: Number of views of post.
+ * - tags: Tags with post.
+ * - attributesData: Attributes data.
+ * - channel: Channel - 'twitter'
+ * - settingname: Username of account in configuration form.
+ *
+ * @ingroup templates
+ *
+ * @see template_preprocess_views_exposed_form()
+ */
+#}
+<div class="socialmediaWrapper eqht" {{ attributes }}>
+  {% for key,values  in doubles.key %}
+    {% if key == "twitter" %}
+      {% for key,twitterPost  in values %}
+        <div class="twitterWrapper socialwrapper">
+          <div class ="twitterTitle title">
+            <strong>{{ twitterPost.attributesData.settingname }} </strong> <a target="_blank" href="https://twitter.com/{{ twitterPost.attributesData.settingname }}">@{{ twitterPost.attributesData.settingname }} </a>   
+            {% if twitterPost.posteddate is not empty %}
+              <a target="_blank" href="https://twitter.com/{{ twitterPost.attributesData.settingname }}/status/{{ twitterPost.postid }}">{{ twitterPost.posteddate }}</a>
+            {% endif %}
+          </div>
+
+          {% if twitterPost.title is not empty %}
+            <div class="feedtitle">
+              {{ twitterPost.title }}
+              {% if twitterPost.postauthor is not empty %}
+                <em>{% trans %}Shared From{% endtrans %}:</em> <a target="_blank" href="https://twitter.com/{{ twitterPost.postauthor }}">@{{ twitterPost.postauthor }}</a>
+              {% endif %}
+            </div>
+          {% endif %}
+
+          {% if twitterPost.tags|length > 0 %}
+            <div>
+              {% for key,tag in tags %}
+                <a href="https://twitter.com/hashtag/{{ tag }}?src=hash">{{ tag }}</a>
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          {% if twitterPost.thumbimageurl %}
+            <div>
+              <img src="{{ twitterPost.thumbimageurl }}" width="300px"/>
+            </div>
+          {% endif %}
+          {% if twitterPost.commentcount is not empty %}
+            <div>
+              {% trans %} Comment Count{% endtrans %}: {{ twitterPost.commentcount }}
+            </div>
+          {% endif %}
+          {% if twitterPost.likecount is not empty %}
+            <div>
+              {% trans %} Like Count{% endtrans %}: {{ twitterPost.likecount }}
+            </div>
+          {% endif %}
+          {% if twitterPost.noofviews is not empty %}
+            <div>
+              {% trans %} Views Count{% endtrans %}: {{ twitterPost.noofviews }}
+            </div>
+          {% endif %}
+
+        </div>
+      {% endfor %}
+    {% elseif key == "facebook" %}
+      {#        {% if values.data is not empty %} 
+                  <div class="facebookWrapper socialwrapper">
+                      <div class ="facebookTitle title">
+                          <a target="_blank" href="https://www.facebook.com/{{ values.hashtag }}">@{{ values.hashtag }}</a>
+                      </div>
+                      {% for key,value  in values.data %}
+                          <div class="feedtitle">
+                              {{ value.message }}
+                          </div>
+                          <div class="feeddate">
+                              {{ value.time }}
+                          </div>
+                      {% endfor %}
+                  </div>
+                {% endif %}	#}
+    {% elseif key == "linkedin" %}
+      {#{% if values.hashtag is not empty %} 
+          <div class="linkedinWrapper socialwrapper">
+              <div class ="linkedinTitle title">
+                  <a target="_blank" href="https://in.linkedin.com/company/{{ values.hashtaglink }}">@{{ values.hashtag }}</a>
+              </div>
+              {% for key,value  in values.data %}
+                  <div class="feedtitle">
+                      {{ value.message }}
+                  </div>
+                  <div class="feeddate">
+                      {{ value.time }}
+                  </div>
+              {% endfor %}
+          </div>
+        {% endif %}#}
+    {% endif %}
+  {% endfor %}
+</div>

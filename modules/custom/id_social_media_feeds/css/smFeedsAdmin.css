@@ -1,0 +1,10 @@
+/*
+CSS file for the admin configuration form.
+*/
+/* 
+    Created on : Apr 21, 2018, 8:11:24 AM
+    Author     : pritam.tiwari
+*/
+
+/* Hide save configuration button on list view. */
+#socialmediafeedlist-admin-settings input.button{display:none;}

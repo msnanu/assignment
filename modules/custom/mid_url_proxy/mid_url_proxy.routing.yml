@@ -1,0 +1,66 @@
+# This file brings everything together. Very nifty!
+
+# Route name can be used in several places; e.g. links, redirects, and local
+# actions.
+entity.mid_url_proxy.canonical:
+  path: '/admin/tools/mid_url_proxy/{mid_url_proxy}'
+  defaults:
+  # Calls the view controller, defined in the annotation of the Mid Url Proxy entity
+    _entity_view: 'mid_url_proxy'
+    _title: 'Mid Url Proxy Content'
+  requirements:
+  # Calls the access controller of the entity, $operation 'view'
+    _entity_access: 'mid_url_proxy.view'
+
+entity.mid_url_proxy.collection:
+  path: '/admin/tools/mid_url_proxy/list'
+  defaults:
+  # Calls the list controller, defined in the annotation of the Mid Url Proxy entity.
+    _entity_list: 'mid_url_proxy'
+    _title: 'Mid Url Proxy List'
+  requirements:
+  # Checks for permission directly.
+    _permission: 'administer mid url proxy entity'
+
+mid_url_proxy.add:
+  path: '/admin/tools/mid_url_proxy/add'
+  defaults:
+  # Calls the form.add controller, defined in the Mid Url Proxy entity.
+    _entity_form: mid_url_proxy.add
+    _title: 'Add Mid Url Proxy'
+  requirements:
+    _entity_create_access: 'mid_url_proxy'
+
+entity.mid_url_proxy.edit_form:
+  path: '/admin/tools/mid_url_proxy/{mid_url_proxy}/edit'
+  defaults:
+  # Calls the form.edit controller, defined in the Mid Url Proxy entity.
+    _entity_form: mid_url_proxy.edit
+    _title: 'Edit Mid Url Proxy'
+  requirements:
+    _entity_access: 'mid_url_proxy.edit'
+
+entity.mid_url_proxy.delete_form:
+  path: '/admin/tools/mid_url_proxy/{mid_url_proxy}/delete'
+  defaults:
+    # Calls the form.delete controller, defined in the Mid Url Proxy entity.
+    _entity_form: mid_url_proxy.delete
+    _title: 'Delete Mid Url Proxy'
+  requirements:
+    _entity_access: 'mid_url_proxy.delete'
+
+mid_url_proxy.url_proxy_settings:
+  path: 'admin/tools/mid_url_proxy_settings'
+  defaults:
+    _form: '\Drupal\mid_url_proxy\Form\UrlProxySettingsForm'
+    _title: 'Mid Url Proxy Settings'
+  requirements:
+    _permission: 'administer mid url proxy entity'
+    
+mid_url_proxy.server_request:
+  path: '/tools/mid-proxy-url/{proxyUrlKey}'
+  defaults:
+    _controller: 'Drupal\mid_url_proxy\Controller\MidUrlProxyController::displayData'
+#    _title: 'Display Data'
+  requirements: 
+    _permission: 'access content'

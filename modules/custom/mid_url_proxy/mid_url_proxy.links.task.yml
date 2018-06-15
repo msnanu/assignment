@@ -1,0 +1,22 @@
+# Define the 'local' links for the module
+
+mid_url_proxy.settings_tab:
+  route_name: mid_url_proxy.url_proxy_settings
+  title: Settings
+  base_route: mid_url_proxy.url_proxy_settings
+
+mid_url_proxy.view:
+  route_name: entity.mid_url_proxy.canonical
+  base_route: entity.mid_url_proxy.canonical
+  title: View
+
+mid_url_proxy.page_edit:
+  route_name: entity.mid_url_proxy.edit_form
+  base_route: entity.mid_url_proxy.canonical
+  title: Edit
+
+mid_url_proxy.delete_confirm:
+  route_name:  entity.mid_url_proxy.delete_form
+  base_route:  entity.mid_url_proxy.canonical
+  title: Delete
+  weight: 10

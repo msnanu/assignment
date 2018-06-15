@@ -1,0 +1,9 @@
+id_social_media_feeds.id_social_media_feeds_admin:
+  css:
+    theme:
+      css/smFeedsAdmin.css: {}
+  js:
+    js/smFeedsAdmin.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery

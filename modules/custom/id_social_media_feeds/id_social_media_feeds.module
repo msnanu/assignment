@@ -1,0 +1,55 @@
+<?php
+
+/**
+ * Implements hook_theme()
+ */
+use Drupal\id_social_media_feeds\twitter\TwitterFeed;
+use Drupal\Core\Mail\MailManagerInterface;
+use Drupal\Component\Utility\SafeMarkup;
+use Drupal\Component\Utility\Html;
+use Drupal\Core\Database\Database;
+use Drupal\Core\Form;
+use Drupal\Core\Form\FormState;
+//use Symfony\Component\
+
+function id_social_media_feeds_theme($existing, $type, $theme, $path) {
+  return [
+    'tweets' => [
+      'variables' => [
+        'doubles' => [],
+      ],
+    ],
+  ];
+}
+
+
+///**
+//* Implements hook_mail().
+//*/
+//function social_feed_mail($key, &$message, $params) {
+//  $options = array(
+//      'langcode' => $message['langcode'],
+//  );
+//  switch ($key) {
+////    case 'linkedin_expiry_mail':
+////      $message['from'] = \Drupal::config('system.site')->get('mail');
+////      $message['subject'] = $params['subject'];
+////      $message['body'][] = $params['message'];
+////      $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed; delsp=yes';
+////    break;
+//
+////    case 'twitter_expiry_mail':
+////      $message['from'] = \Drupal::config('system.site')->get('mail');
+////      $message['subject'] = $params['subject'];
+////      $message['body'][] = $params['message'];
+////      $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed; delsp=yes';
+////    break;
+//
+////    case 'facebook_expiry_mail':
+////      $message['from'] = \Drupal::config('system.site')->get('mail');
+////      $message['subject'] = $params['subject'];
+////      $message['body'][] = $params['message'];
+////      $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed; delsp=yes';
+////    break;
+//  }
+//}

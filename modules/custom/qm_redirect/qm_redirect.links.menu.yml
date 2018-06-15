@@ -1,0 +1,6 @@
+qm_redirect_listing:
+  title: Questionmark URL Redirects
+  description: 'Questionmark Redirect'
+  route_name: qm_redirect_listing
+  parent: system.admin_config_search
+  weight: -6
